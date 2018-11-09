@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { Provider } from 'unstated'
 
 import Home from './components/Home'
 import Transport from './components/Transport'
@@ -10,7 +11,8 @@ import Consumption from './components/Consumption'
 import Food from './components/Food'
 
 ReactDOM.render(
-  <Router>
+  <Provider>
+    <Router>
     <>
       <div className='main'>
         <Switch>
@@ -23,6 +25,7 @@ ReactDOM.render(
       </div>
       <NavBar />
     </>
-  </Router>,
+    </Router>
+  </Provider>,
   document.getElementById('root')
 )
