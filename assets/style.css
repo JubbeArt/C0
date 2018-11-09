@@ -10,7 +10,7 @@ html, body {
   background-size: cover;
   margin: 0 auto 30px;
   width: 45%;
-  max-width: 550px;
+  /* max-width: 550px; */
 }
 
 
@@ -20,7 +20,7 @@ html, body {
   width: 56%;
   position: relative;
   display: block;
-  filter: hue-rotate(150deg);
+  filter: hue-rotate(0);
   transition: filter 1s;
 }
 
@@ -30,7 +30,7 @@ html, body {
 }
 
 .main {
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .home-button {
