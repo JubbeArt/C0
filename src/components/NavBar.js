@@ -17,11 +17,17 @@ const Nav = styled.div`
   width: 100%;
 `
 
+const Img = styled.img`
+max-width:100%;
+max-height:100%;
+filter:invert(100%);
+`
+
 export default props => (
   <Nav className='nav-bar'>
-    <Div to='el'>El</Div>
-    <Div to='ink'>Inköp</Div>
-    <Div to='mat'>Mat</Div>
-    <Div to='transport'>Transport</Div>
+    <Div to='el'><Img src='/assets/circle.png' /></Div>
+    <Div to='ink'><Img src='/assets/circle.png' /></Div>
+    <Div to='mat'><Img src='/assets/circle.png' /></Div>
+    <Div to='transport'><Img src='/assets/circle.png' /></Div>
   </Nav>
 )
