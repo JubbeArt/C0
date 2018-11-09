@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+.globe {
+  background-image: url('/assets/globe.png');
+  background-size: cover;
+  margin: 30px auto;
+  width: 20vw;
+  height: 20vw;
+  padding: 30px;
+  max-width: 500px;
+}
+
+.footprint {
+  margin: 0 auto;
+  left: 0;
+  top: 10%;
+  width: 70%;
+  position: relative;
+  display: block;
+}
