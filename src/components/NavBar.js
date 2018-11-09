@@ -19,7 +19,7 @@ const Nav = styled.div`
 
 export default props => (
   <Nav>
-    <Div to='el'>El</Div>
+    <Div to='el'><img src='/assets/circle.png' /></Div>
     <Div to='ink'>Inköp</Div>
     <Div to='mat'>Mat</Div>
     <Div to='transport'>Transport</Div>
