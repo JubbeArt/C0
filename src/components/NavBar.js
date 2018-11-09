@@ -29,5 +29,10 @@ export default props => (
     <Div to='/consumption'><Img src='/assets/circle.png' /></Div>
     <Div to='/food'><Img src='/assets/circle.png' /></Div>
     <Div to='/transport'><Img src='/assets/circle.png' /></Div>
+    <Link to='/'>
+      <div className='home-button' />
+    </Link>
   </Nav>
+
+  // style={{ left: window.innerHeight * 0.5 }
 )
