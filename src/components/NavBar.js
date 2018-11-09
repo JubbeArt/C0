@@ -25,9 +25,9 @@ filter:invert(100%);
 
 export default props => (
   <Nav className='nav-bar'>
-    <Div to='el'><Img src='/assets/circle.png' /></Div>
-    <Div to='ink'><Img src='/assets/circle.png' /></Div>
-    <Div to='mat'><Img src='/assets/circle.png' /></Div>
-    <Div to='transport'><Img src='/assets/circle.png' /></Div>
+    <Div to='/electricity'><Img src='/assets/circle.png' /></Div>
+    <Div to='/consumption'><Img src='/assets/circle.png' /></Div>
+    <Div to='/food'><Img src='/assets/circle.png' /></Div>
+    <Div to='/transport'><Img src='/assets/circle.png' /></Div>
   </Nav>
 )

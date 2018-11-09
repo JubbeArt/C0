@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default props => (
-  <div>Transport</div>
-)
+export default class Transport extends React.Component {
+  render () {
+    return <h1>Transport</h1>
+  }
+}
