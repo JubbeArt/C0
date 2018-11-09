@@ -9,22 +9,26 @@ html, body {
   background-image: url('/assets/globe.png');
   background-size: cover;
   margin: 30px auto;
-  width: 45vw;
-  height: 45vw;
-  padding: 30px;
-  max-width: 500px;
+  width: 45%;
+  max-width: 550px;
 }
+
 
 .footprint {
   margin: 0 auto;
-  left: 0;
-  top: 10%;
-  width: 70%;
+  top: 22%;
+  width: 56%;
   position: relative;
   display: block;
+  filter: hue-rotate(150deg);
+  transition: filter 1s;
 }
 
 .nav-bar {
   position: fixed;
   bottom: 0;
+}
+
+.main {
+  padding: 50px;
 }
