@@ -14,11 +14,11 @@ const Div = styled(Link)`
 const Nav = styled.div`
   display:flex;
   flex-direction:row;
-  width:500px;
+  width: 100%;
 `
 
 export default props => (
-  <Nav>
+  <Nav className='nav-bar'>
     <Div to='el'>El</Div>
     <Div to='ink'>Inköp</Div>
     <Div to='mat'>Mat</Div>
