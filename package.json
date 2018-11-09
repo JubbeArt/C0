@@ -1,0 +1,24 @@
+{
+  "name": "C0",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:JubbeArt/C0.git",
+  "author": "Jesper Wrang <jeswr740@student.liu.se>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "standard": "^12.0.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1"
+  }
+}
