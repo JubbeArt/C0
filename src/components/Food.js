@@ -11,11 +11,18 @@ class Food extends React.Component {
       flaskfars: 0,
       blandfars: 0
     }
+
+    this.addMeal = this.addMeal.bind(this)
   }
 
-  // Fläskfärs
-  // Nötfärs
-  // Blandfärs
+  addMeal () {
+    this.setState({
+      notfars: 0,
+      flaskfars: 0,
+      blandfars: 0,
+      modalOpen: false
+    })
+  }
 
   render () {
     const foodTypes = [
@@ -40,23 +47,31 @@ class Food extends React.Component {
       <>
         <div className='content'>
           <h1>Food</h1>
-          <button onClick={() => { this.setState({ modalOpen: true }) }}>Lägg till måltid</button>
+          <button onClick={() => this.setState({ modalOpen: true })}>Lägg till måltid</button>
         </div>
-        <div className='modal'>
-          <h2>Ny måltid</h2>
-          {
-            foodTypes.map(({ name, value, onChange }, index) => (
-              <div key={name} className='food-type'>
-                <span>{name}:</span>
-                <div>
-                  <input type='number' value={value} onChange={onChange} />
-                  <span>&nbsp;KG</span>
-                </div>
-              </div>
-            ))
-          }
-          <button>Lägg till</button>
-        </div>
+        {
+          this.state.modalOpen && (
+            <div className='modal'>
+              <h2>Ny måltid</h2>
+              <div className='exit-modal' onClick={() => this.setState({ modalOpen: false })}>X</div>
+              {
+                foodTypes.map(({ name, value, onChange }, index) => (
+                  <React.Fragment key={name}>
+                    {index !== 0 && <hr /> }
+                    <div className='food-type'>
+                      <span>{name}:</span>
+                      <div>
+                        <input type='number' value={value} onChange={onChange} />
+                        <span>&nbsp;KG</span>
+                      </div>
+                    </div>
+                  </React.Fragment>
+                ))
+              }
+              <button style={{ marginTop: '35px' }} onClick={this.addMeal}>Lägg till</button>
+            </div>
+          )
+        }
       </>
     )
   }

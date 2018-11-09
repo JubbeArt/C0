@@ -6,12 +6,14 @@ class GlobalState extends Container {
     super()
 
     this.state = {
-      count: 0
+      totalMeal: {
+
+      }
     }
   }
 
-  increment () {
-    this.setState({ count: this.state.count + 1 })
+  addMeal (meal) {
+    // this.setState({ meals: [...this.state.meals, meal] })
   }
 }
 
