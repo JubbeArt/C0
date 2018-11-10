@@ -5,7 +5,7 @@ class Info extends React.Component {
   render () {
     return (
       <div className='info-container'>
-        <div className='info-box'>Lorem</div>
+        <div className='info-box'><h3>Lorem</h3><p className='info-text'> Textibjkbnnjkax casnbuvycth ugybkuyfgjmg djrdyhtcjy kuyg vugfv tjyhfg jhgv.</p></div>
         <div className='info-box'>ipsum</div>
         <div className='info-box'>dolor</div>
         <div className='info-box'>sit</div>
