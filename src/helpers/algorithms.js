@@ -32,3 +32,5 @@ export function dailyAverage (days) {
   var total = calculateTotals()
   return total / days
 }
+
+// TODO: Save data in a way that today's consumption can be identified
