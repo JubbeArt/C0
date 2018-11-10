@@ -4,25 +4,41 @@ import { connect } from '../state'
 class Info extends React.Component {
   render () {
     return (
-      <div className='info-container'>
-        <div className='info-box'><h3>Lorem</h3><p className='info-text'> Textibjkbnnjkax casnbuvycth ugybkuyfgjmg djrdyhtcjy kuyg vugfv tjyhfg jhgv.</p></div>
-        <div className='info-box'>ipsum</div>
-        <div className='info-box'>dolor</div>
-        <div className='info-box'>sit</div>
-        <div className='info-box'>amet</div>
-        <div className='info-box'>consectetur</div>
-        <div className='info-box'>adipiscing </div>
-        <div className='info-box'>elit</div>
-        <div className='info-box'>Så</div>
-        <div className='info-box'>sååå</div>
-        <div className='info-box'>Sååå</div>
-        <div className='info-box'>Sååå</div>
-        <div className='info-box'>Sååå</div>
-        <div className='info-box'>SåååSååå</div>
-        <div className='info-box'>Sååå</div>
-        <div className='info-box'>Sååå</div>
-        <div className='info-box'>SåååSåååSååå</div>
-        <div className='info-box'>SåååSååå</div>
+      <div className='content'>
+        <div className='title'>
+          <img src='/assets/info.png' />
+          <span className='big-text'>Miljösmarta tips</span>
+        </div>
+
+        <div className='info-container'>
+          <div className='info-box' style={{ backgroundColor: '#FF6B6B' }}>
+            <div className='big-text'>Energi</div>
+            <div className='tip-text'>
+              Du behöver se över din förbrukning. Här kan du läsa hur!
+            </div>
+          </div>
+
+          <div className='info-box'>
+            <div className='big-text'>Mat</div>
+            <div className='tip-text'>
+              Din matkonsumtion är på en mycket bra nivå. Eco is healthy!
+            </div>
+          </div>
+
+          <div className='info-box'>
+            <div className='big-text'>Transport</div>
+            <div className='tip-text'>
+              Dina transportvanor är hållbara! Keep that bike rolling!
+            </div>
+          </div>
+
+          <div className='info-box'>
+            <div className='big-text'>Guldtips</div>
+            <div className='tip-text'>
+              För dig som inte får nog av miljö. You're like, super green!
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
