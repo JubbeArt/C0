@@ -7,7 +7,7 @@ import Home from './components/Home'
 import Transport from './components/Transport'
 import NavBar from './components/NavBar'
 import Electricity from './components/Electricity'
-import Consumption from './components/Consumption'
+import Info from './components/Info'
 import Food from './components/Food'
 
 ReactDOM.render(
@@ -19,7 +19,7 @@ ReactDOM.render(
             <Route path='/transport' component={Transport} />
             <Route path='/food' component={Food} />
             <Route path='/electricity' component={Electricity} />
-            <Route path='/consumption' component={Consumption} />
+            <Route path='/info' component={Info} />
             <Route component={Home} />
           </Switch>
         </div>
