@@ -165,11 +165,17 @@ button:hover {
 
 .info-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .info-box {
-  width: 50%;
-  height:20px;
+  width: 45%;
+  height: 85px;
   background-color:hotpink;
+  margin-bottom: 14px;
+  text-align: center;
+  /* vertical-align: text-top; */
 }
