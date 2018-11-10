@@ -141,3 +141,14 @@ button {
 button:hover {
   background-color: #e2e0d1;
 }
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-box {
+  width: 50%;
+  height:20px;
+  background-color:hotpink;
+}
