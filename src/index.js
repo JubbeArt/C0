@@ -13,18 +13,18 @@ import Food from './components/Food'
 ReactDOM.render(
   <Provider>
     <Router>
-    <>
-      <div className='main'>
-        <Switch>
-          <Route path='/transport' component={Transport} />
-          <Route path='/food' component={Food} />
-          <Route path='/electricity' component={Electricity} />
-          <Route path='/consumption' component={Consumption} />
-          <Route component={Home} />
-        </Switch>
-      </div>
-      <NavBar />
-    </>
+      <>
+        <div className='main'>
+          <Switch>
+            <Route path='/transport' component={Transport} />
+            <Route path='/food' component={Food} />
+            <Route path='/electricity' component={Electricity} />
+            <Route path='/consumption' component={Consumption} />
+            <Route component={Home} />
+          </Switch>
+        </div>
+        <NavBar />
+      </>
     </Router>
   </Provider>,
   document.getElementById('root')

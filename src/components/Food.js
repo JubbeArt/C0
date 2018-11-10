@@ -1,77 +1,103 @@
 import React from 'react'
 import { connect } from '../state'
 
+const none = 'Inget'
+
+const meatType = {
+  none: 'Ingen',
+  beef: 'Biff',
+  pork: 'Fläsk',
+  mincedMeat: 'Färs',
+  quorn: 'Quorn',
+  fish: 'Fisk'
+}
+
+const baseType = {
+  none: 'Inget',
+  rice: 'Ris',
+  pasta: 'Pasta',
+  pototoes: 'Potatis'
+}
+
+const vegetableType = {
+  none
+}
+
+const initState = Object.freeze({
+  meatType: none,
+  meatWeight: 0,
+  baseType: none,
+  baseWeight: 0,
+  vegetableType: none,
+  vegetableWeight: 0
+})
+
 class Food extends React.Component {
   constructor () {
     super()
 
-    this.state = {
-      modalOpen: false,
-      notfars: 0,
-      flaskfars: 0,
-      blandfars: 0
-    }
-
+    this.state = initState
     this.addMeal = this.addMeal.bind(this)
   }
 
   addMeal () {
-    this.setState({
-      notfars: 0,
-      flaskfars: 0,
-      blandfars: 0,
-      modalOpen: false
-    })
+    this.setState({ ...initState })
   }
 
   render () {
-    const foodTypes = [
-      {
-        name: 'Nötfärs',
-        value: this.state.notfars,
-        onChange: event => this.setState({ notfars: event.target.value })
-      },
-      {
-        name: 'Fläskfärs',
-        value: this.state.flaskfars,
-        onChange: event => this.setState({ flaskfars: event.target.value })
-      },
-      {
-        name: 'Blandfärs',
-        value: this.state.blandfars,
-        onChange: event => this.setState({ blandfars: event.target.value })
-      }
-    ]
-
     return (
       <>
         <div className='content'>
-          <h1>Food</h1>
-          <button onClick={() => this.setState({ modalOpen: true })}>Lägg till måltid</button>
-        </div>
-        {
-          this.state.modalOpen && (
-            <div className='modal'>
-              <h2>Ny måltid</h2>
-              <div className='exit-modal' onClick={() => this.setState({ modalOpen: false })}>X</div>
-              {
-                foodTypes.map(({ name, value, onChange }, index) => (
-                  <React.Fragment key={name}>
-                    {index !== 0 && <hr /> }
-                    <div className='food-type'>
-                      <span>{name}:</span>
-                      <div>
-                        <input type='number' value={value} onChange={onChange} />
-                        <span>&nbsp;KG</span>
-                      </div>
-                    </div>
-                  </React.Fragment>
-                ))
-              }
-              <button style={{ marginTop: '35px' }} onClick={this.addMeal}>Lägg till</button>
+          <h1>Mat</h1>
+          <div className='food-type'>
+            <span style={{ marginRight: '16px' }}>Basmat:</span>
+            <div className='food-input'>
+              <select onChange={event => this.setState({ baseType: event.target.value })} value={this.baseType}>
+                {
+                  Object.entries(baseType).map(([key, value]) => (
+                    <option>{value}</option>
+                  ))
+                }
+              </select>
+              <input type='number' value={this.state.baseWeight} onChange={event => this.setState({ baseWeight: event.target.value })} />
             </div>
-          )
-        }
+            <span>&nbsp;KG</span>
+          </div>
+          <hr />
+          <div className='food-type'>
+            <span style={{ marginRight: '16px' }}>Kött:</span>
+            <div className='food-input'>
+              <select onChange={event => this.setState({ meatType: event.target.value })} value={this.meatType}>
+                {
+                  Object.entries(meatType).map(([key, value]) => (
+                    <option>{value}</option>
+                  ))
+                }
+              </select>
+              <input type='number' value={this.state.meatWeight} onChange={event => this.setState({ meatWeight: event.target.value })} />
+            </div>
+            <span>&nbsp;KG</span>
+          </div>
+          <hr />
+          <div className='food-type'>
+            <span style={{ marginRight: '16px' }}>Grönsaker:</span>
+            <div className='food-input'>
+
+              <select onChange={event => this.setState({ vegetableType: event.target.value })} value={this.vegetableType}>
+                {
+                  Object.entries(vegetableType).map(([key, value]) => (
+                    <option>{value}</option>
+                  ))
+                }
+              </select>
+              <input type='number' value={this.state.vegetableWeight} onChange={event => this.setState({ vegetableWeight: event.target.value })} />
+            </div>
+            <span>&nbsp;KG</span>
+          </div>
+
+          <button style={{ marginTop: '35px' }} onClick={this.addMeal}>Spara</button>
+        </div>
+
       </>
     )
   }
