@@ -1,16 +1,18 @@
 import React from 'react'
 import { connect } from '../state'
 
+const minWidth = 300
+
 class Home extends React.Component {
   constructor () {
     super()
 
     this.state = {
-      width: window.innerWidth * 0.5
+      width: Math.min(window.innerWidth * 0.5, minWidth)
     }
 
     window.addEventListener('resize', () => {
-      this.setState({ width: window.innerWidth * 0.5 })
+      this.setState({ width: Math.min(window.innerWidth * 0.5, minWidth) })
     })
   }
 
