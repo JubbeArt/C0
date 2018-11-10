@@ -3,7 +3,7 @@ import { connect } from '../state'
 import { addMeal } from '../helpers/algorithms'
 
 const meatType = {
-  none: 'Ingen',
+  none: 'Inget',
   beef: 'Nöt',
   pork: 'Fläsk',
   quorn: 'Quorn',
