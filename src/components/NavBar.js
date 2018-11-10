@@ -33,6 +33,4 @@ export default props => (
       <div className='home-button' />
     </Link>
   </Nav>
-
-  // style={{ left: window.innerHeight * 0.5 }
 )
