@@ -1,12 +1,12 @@
 html, body {
   margin: 0;
   background: #81FBB8;
-  color: #EFEEE4;
+  color: white;
   font-family: 'Ubuntu', sans-serif;
   height: 100%;
 }
 
-.small-text {font-size: 1.3em;}
+.small-text {font-size: 1.2em;}
 
 .big-text {
   font-size: 1.9em;
@@ -14,12 +14,12 @@ html, body {
 
 .fat-text {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 .home-pollution {
   text-align: left;
-  padding: 0 85px 20px;
+  padding: 11px 22px 20px;
 }
 
 .globe {
@@ -29,15 +29,36 @@ html, body {
 }
 
 select {
-  font-size: 1.3em;
-  background-color: #EFEEE4;
-  height: 40px;
-  padding: 6px 7px;
-  flex-grow: 20;
-  border: 0;
-  border-radius: 13px 0 0 14px;
+  outline: 0;
+  font-size: 1.1em;
+  background-color: white;
+  height: 42px;
+  width: 60%;
+  color: #28C76F;
+  padding: 5px 20px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-right: 13px;
+  border-radius: 16px;
 }
 
+/* select option:hover {
+  color: #000; 
+  background-color: green;
+} */
+
+.input-number-box{
+  height: 42px;
+  display: inline-flex;
+  color: #28C76F;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  font-size: 19px;
+  width: 40%;
+  background-color: white;
+  border-radius: 16px;
+}
 
 .footprint {
   margin: 0 auto;
@@ -76,8 +97,20 @@ select {
 
 .content {
   padding: 24px;
-  text-align: center;
+  /* text-align: center; */
 }
+
+.title {
+  margin-bottom: 30px;
+}
+
+.title span {
+    margin-left: 22px;
+    bottom: 11px;
+    position: relative;
+}
+
+.title img {width: 60px;max-height: 100%;max-width: 100%;}
 
 .main {
   padding: 25px 0;
@@ -95,12 +128,20 @@ select {
 }
 
 h1 {
-  text-decoration: underline;
   font-size: 3em;
 }
 
 h2 {
   font-size: 2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.input-title {
+  margin-bottom: 10px;
+  margin-top: 23px;
 }
 
 .modal {
@@ -114,13 +155,20 @@ h2 {
   background-color: rgba(1,1,1,0.85);
 }
 
-.food-input {
-  display: flex;
-  flex-grow: 1;
-}
 
 hr{
   margin: 24px 0;
+}
+
+.input-row {
+  display: flex;
+  flex-grow: 1;  
+}
+
+.input-number-button {
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
 }
 
 .food-type {
@@ -152,18 +200,14 @@ input[type=number] {
 }
 
 button {
-  padding: 10px 20px;
-  border-radius: 3px;
+  padding: 15px 20px;
+  border-radius: 38px;
   border: 0;
   width: 100%;
-  background-color: #EFEEE4;
-  font-weight: bold;
-  font-size: 20px;
+  background-color: #28C76F;
+  color: white;
+  /* font-weight: bold; */
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 28px;
   cursor: pointer;
-  transition: background-color 0.1s;
-  box-shadow: grey 2px 2px 3px;
-}
-
-button:hover {
-  background-color: #e2e0d1;
 }

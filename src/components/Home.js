@@ -22,7 +22,7 @@ class Home extends React.Component {
       <div className='globe' style={{ width: this.state.width, height: this.state.width }}>
         <img className='footprint' src='/assets/gold-foot.png' />
       </div>
-      <div className='content'>
+      <div className='content center'>
         <div className='small-text' style={{ marginTop: '10px' }}>Nivå: Guld</div>
         <div className='small-text'>Du är grym!</div>
         <div className='big-text' style={{ margin: '20px 0 20px' }}>Koldioxidutsläpp</div>
