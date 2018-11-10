@@ -1,36 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-
-const Div = styled(Link)`
-  width:25%;
-  height:50px;
-  text-align:center;
-  color:yellow;
-  background-color:blue;
-  border:1px solid black;
-`
-
-const Nav = styled.div`
-  display:flex;
-  flex-direction:row;
-  width: 100%;
-`
-
-const Img = styled.img`
-max-width:100%;
-max-height:100%;
-filter:invert(100%);
-`
 
 export default props => (
-  <Nav className='nav-bar'>
-    <Div to='/electricity'><Img src='/assets/circle.png' /></Div>
-    <Div to='/consumption'><Img src='/assets/circle.png' /></Div>
-    <Div to='/food'><Img src='/assets/circle.png' /></Div>
-    <Div to='/transport'><Img src='/assets/circle.png' /></Div>
-    <Link to='/'>
-      <div className='home-button' />
+  <div className='nav-bar'>
+    <Link className='nav-icon' to='/electricity'>
+      <img src='/assets/batteri.png' style={{ width: '50%' }} />
     </Link>
-  </Nav>
+    <Link className='nav-icon' to='/food'>
+      <img src='/assets/gaffel-kniv.png' style={{ width: '45%' }} />
+    </Link>
+    <Link className='nav-icon' to='/transport'>
+      <img src='/assets/cykel.png' style={{ width: '65%' }} />
+    </Link>
+    <Link className='nav-icon' to='/info'>
+      <img src='/assets/info.png' style={{ width: '40%' }} />
+    </Link>
+    {/* <Link to='/'>
+      <img className='home-button' />
+    </Link> */}
+  </div>
 )
