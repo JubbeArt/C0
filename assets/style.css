@@ -121,6 +121,10 @@ select {
   margin: -49px auto 0;
 }
 
+button:focus {
+  outline: 0
+}
+
 .home-button img {
   display: block;
   margin: 0 auto;
