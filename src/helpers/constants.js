@@ -14,6 +14,14 @@ export const consumptionPerKilo = {
   localFruit: 0.5
 }
 
+export const vehicleEfficiency = {
+  cycle: 0,
+  train: 2.3 * 0.05,
+  bus: 2.3 * 0.05,
+  car: 2.3 * 0.05,
+  plane: 2.3 * 0.05
+}
+
 export const goals = {
   perDay: 15
 }

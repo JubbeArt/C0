@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from '../state'
+import * as algs from '../helpers/algorithms.js'
 
 const transportType = {
   cycle: 'Cykel',
@@ -27,21 +28,13 @@ class Transport extends React.Component {
     super()
 
     this.state = initState
-    // this.addMeal = this.addMeal.bind(this)
+    this.submitTrip = this.submitTrip.bind(this)
   }
 
-  // addMeal () {
-  //   const meal = {
-  //     [this.state.meatType]: Number(this.state.meatWeight),
-  //     [this.state.baseType]: Number(this.state.meatWeight),
-  //     [this.state.vegetableType]: Number(this.state.vegetableWeight)
-  //   }
-
-  //   delete meal.none
-
-  //   addMeal(meal)
-  //   this.setState({ ...initState })
-  // }
+  submitTrip () {
+    algs.addTrip(this.state.transportType, this.state.distance)
+    this.setState({ ...initState })
+  }
 
   render () {
     return (
@@ -62,9 +55,9 @@ class Transport extends React.Component {
               }
             </select>
             <div className='input-number-box'>
-              <span className='input-number-button' onClick={() => this.setState(state => ({ distance: Math.max(0, state.distance - 100) }))}>&#8861;</span>
+              <span className='input-number-button' onClick={() => this.setState(state => ({ distance: Math.max(0, state.distance - 1) }))}>&#8861;</span>
               <span>{this.state.distance} <b>km</b></span>
-              <span className='input-number-button' onClick={() => this.setState(state => ({ distance: state.distance + 100 }))}>&#8853;</span>
+              <span className='input-number-button' onClick={() => this.setState(state => ({ distance: state.distance + 1 }))}>&#8853;</span>
             </div>
           </div>
 
@@ -80,7 +73,7 @@ class Transport extends React.Component {
             <div style={{ background: 'none' }} className='input-number-box' />
           </div>
 
-          <button style={{ marginTop: '35px' }} onClick={this.addMeal}>Spara</button>
+          <button style={{ marginTop: '35px' }} onClick={this.submitTrip}>Spara</button>
         </div>
 
       </>

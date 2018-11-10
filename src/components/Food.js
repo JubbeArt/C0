@@ -15,7 +15,7 @@ const meatType = {
 const baseType = {
   rice: 'Ris',
   pasta: 'Pasta',
-  pototoes: 'Potatis'
+  potatoes: 'Potatis'
 }
 
 const vegetableType = {
@@ -48,7 +48,7 @@ class Food extends React.Component {
       [this.state.vegetableType]: Number(this.state.vegetableWeight)
     }
 
-    delete meal.none
+    // delete meal.none
 
     addMeal(meal)
     this.setState({ ...initState })

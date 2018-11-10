@@ -29,7 +29,7 @@ class Home extends React.Component {
         <div className='big-text' style={{ margin: '20px 0 20px' }}>Koldioxidutsläpp</div>
         <div className='small-text'>Ditt utsläpp idag</div>
         <div className='home-pollution'>
-          <div className='fat-text'>{algs.calculateTotals()} kg CO<sub>2</sub></div>
+          <div className='fat-text'>{(algs.calculateTotals()).toFixed(2)} kg CO<sub>2</sub></div>
         </div>
         <div className='small-text'>Ditt genomsnittliga utsläpp</div>
         <div className='home-pollution'>
