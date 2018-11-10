@@ -3,7 +3,7 @@ import { connect } from '../state'
 import { addMeal } from '../helpers/algorithms'
 
 const meatType = {
-  none: 'Ingen',
+  none: 'Inget',
   beef: 'Nöt',
   pork: 'Fläsk',
   quorn: 'Quorn',
@@ -78,7 +78,7 @@ class Food extends React.Component {
           </div>
           <hr />
           <div className='food-type'>
-            <span style={{ marginRight: '16px' }}>Kött:</span>
+            <span style={{ marginRight: '16px' }}>Protein:</span>
             <div className='food-input'>
               <select onChange={event => this.setState({ meatType: event.target.value })} value={this.meatType}>
                 {
@@ -93,7 +93,7 @@ class Food extends React.Component {
           </div>
           <hr />
           <div className='food-type'>
-            <span style={{ marginRight: '16px' }}>Grönt:</span>
+            <span style={{ marginRight: '16px' }}>Frunkt och grönt:</span>
             <div className='food-input'>
 
               <select onChange={event => this.setState({ vegetableType: event.target.value })} value={this.vegetableType}>
