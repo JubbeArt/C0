@@ -4,7 +4,7 @@ import { addMeal } from '../helpers/algorithms'
 
 const meatType = {
   beef: 'Nöt',
-  pork: 'Fläsknone',
+  pork: 'Fläsk',
   quorn: 'Quorn',
   mincedMeat: 'Köttfärs',
   fish: 'Fisk',

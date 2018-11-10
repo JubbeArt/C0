@@ -93,7 +93,7 @@ select {
 
 .nav-icon {width: 18%;top: 50%;}
 
-.nav-icon img {max-width: 70px;max-height: 100%;/* top: 50%; *//* transform: translateY(-50%); *//* width: 75%; */margin: 0 auto;display: block;}
+.nav-icon img {max-width: 70px;max-height: 100%;margin: 0 auto;display: block;}
 
 .content {
   padding: 24px;
@@ -102,6 +102,7 @@ select {
 
 .title {
   margin-bottom: 30px;
+  /* height: 62px; */
 }
 
 .title span {
@@ -125,6 +126,7 @@ select {
   display: block;
   margin: 0 auto;
   max-width: 150px;
+  /* border-radius: 76px; */
 }
 
 h1 {
@@ -199,6 +201,21 @@ input[type=number] {
   height: 28px;
   border-radius: 0 13px 13px 0;
   background-color: #EFEEE4;
+}
+
+.energy-bars{display: flex;flex-direction: row;margin: 20px 0 20px;align-items: flex-end;/* max-width: 103px; */justify-content: space-evenly;}
+
+.energy-bar {width: 12%;max-width: 49px;border-radius: 16px;background-color: #28C76F;box-shadow: hsl(0, 0%, 58%) 1px 1px 9px 0px;}
+
+.energy-img {
+  width: 48%;
+  margin-bottom: 10px;
+  /* margin: 0 auto; */
+}
+
+
+.energy-flex {
+  flex-wrap: flex;
 }
 
 button {
