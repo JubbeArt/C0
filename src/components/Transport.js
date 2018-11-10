@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from '../state'
-import { addMeal } from '../helpers/algorithms'
 
 const transportType = {
   cycle: 'Cykel',

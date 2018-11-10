@@ -158,6 +158,8 @@ h2 {
 
 hr{
   margin: 24px 0;
+  border-color: #28C76F;
+  border-width: 0.5px;
 }
 
 .input-row {
