@@ -174,13 +174,16 @@ button:hover {
   justify-content: space-evenly;
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 50px;
+  color: black;
 }
 
 .info-box {
   width: 45%;
   height: 85px;
-  background-color:hotpink;
+  background-color:beige;
   margin-bottom: 14px;
   text-align: center;
+  outline:5px solid red;
   /* vertical-align: text-top; */
 }
