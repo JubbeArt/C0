@@ -12,9 +12,9 @@ export function addToLocalStorage (foodType, consumption) {
 }
 
 export function addMeal (meal) {
-  var meals = JSON.parse(localStorage.getItem('MEALS'))
+  var meals = JSON.parse(localStorage.getItem('MEALS')) || []
   meals.push(meal)
-  meal.forEach(([foodType, consumption]) => {
+  Object.entries(meal).forEach(([foodType, consumption]) => {
     addToLocalStorage(foodType, consumption)
   })
   localStorage.setItem('MEALS', JSON.stringify(meals))
